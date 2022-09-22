@@ -11,6 +11,15 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     }
+  }, server: {
+    proxy: {
+      // 请求路径转发
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   css: {
     // css预处理器
