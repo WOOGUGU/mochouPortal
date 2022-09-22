@@ -48,3 +48,4 @@ defineProps<{ msg: string }>()
   color: #888;
 }
 </style>
+
