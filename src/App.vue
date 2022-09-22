@@ -14,7 +14,7 @@
   <p>性别：{{ sex }}</p>
   <button @click="ageAdd">age++</button>
   <button @click="ageSubtract">age--</button>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <script setup lang="ts">
@@ -22,7 +22,6 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import { userUsersStore } from './store/user';
-import { storeToRefs } from 'pinia';
 
 const store = userUsersStore();
 const { name, age, sex } = storeToRefs(store);

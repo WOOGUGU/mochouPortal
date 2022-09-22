@@ -1,6 +1,9 @@
 <template>
   <h1>{{ msg }}</h1>
 
+  <n-icon size="40" color="#0e7a0d">
+    <FlowData />
+  </n-icon>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
@@ -30,7 +33,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { userUsersStore, } from '../store/user';
-import { storeToRefs } from 'pinia';
+import { FlowData } from '@vicons/carbon';
 
 const count = ref(0)
 const store = userUsersStore();
