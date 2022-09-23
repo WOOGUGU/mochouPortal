@@ -32,12 +32,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { userUsersStore, } from '../store/user';
-import { FlowData } from '@vicons/carbon';
+import { userUsersStore } from '../store/user'
+import { FlowData } from '@vicons/carbon'
 
 const count = ref(0)
-const store = userUsersStore();
-const { name, age, sex } = storeToRefs(store);
+const store = userUsersStore()
+const { name, age, sex } = storeToRefs(store)
 
 defineProps<{ msg: string }>()
 
@@ -48,4 +48,3 @@ defineProps<{ msg: string }>()
   color: #888;
 }
 </style>
-

@@ -9,5 +9,10 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     NIcon: typeof import('naive-ui')['NIcon']
+    NLayout: typeof import('naive-ui')['NLayout']
+    NLayoutContent: typeof import('naive-ui')['NLayoutContent']
+    NLayoutFooter: typeof import('naive-ui')['NLayoutFooter']
+    NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
+    NProgress: typeof import('naive-ui')['NProgress']
   }
 }

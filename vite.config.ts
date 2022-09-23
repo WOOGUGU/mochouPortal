@@ -4,6 +4,7 @@ import path from 'path';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import eslintPlugin from 'vite-plugin-eslint';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,10 +23,17 @@ export default defineConfig({
             'useLoadingBar'
           ]
         }
-      ],
+      ], eslintrc: {
+        enabled: true, // 默认false, true启用。生成一次就可以，避免每次工程启动都生成
+        filepath: './.eslintrc-auto-import.json', // 生成json文件
+        globalsPropValue: true,
+      },
     }),
     Components({
       resolvers: [NaiveUiResolver()]
+    }),
+    eslintPlugin({
+      include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
     }),
   ],
   resolve: {
