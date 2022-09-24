@@ -1,11 +1,9 @@
 <template>
-  <!-- <portal /> -->
-  <router-view />
+  <n-h1>ARTICAL INFO</n-h1>
 </template>
 
 <script setup lang="ts">
-import 'vfonts/FiraCode.css'
-import 'vfonts/Lato.css'
+
 </script>
 
 <style lang="less" scoped>

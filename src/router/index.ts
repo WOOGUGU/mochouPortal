@@ -8,6 +8,14 @@ const routes = [
       {
         path: '/home',
         component: () => import('@/views/portal/home/index.vue')
+      },
+      {
+        path: '/artical-list',
+        component: () => import('@/views/portal/articalList/index.vue')
+      },
+      {
+        path: '/artical-info',
+        component: () => import('@/views/portal/articalInfo/index.vue')
       }
     ]
   }

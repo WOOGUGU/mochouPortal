@@ -1,11 +1,10 @@
 <template>
-  <!-- <portal /> -->
-  <router-view />
+  <div class="footer">
+    <n-h1>footer</n-h1>
+  </div>
 </template>
 
 <script setup lang="ts">
-import 'vfonts/FiraCode.css'
-import 'vfonts/Lato.css'
 </script>
 
 <style lang="less" scoped>

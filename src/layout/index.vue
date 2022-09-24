@@ -1,29 +1,38 @@
 <template>
-  <n-layout>
-    <n-layout-header>颐和园路</n-layout-header>
-    <n-layout-content content-style="padding: 24px;">
-      平山道
+  <n-layout class="layoutHome">
+    <n-layout-header bordered>
+      <portalHeader />
+    </n-layout-header>
+    <n-layout-content bordered>
+      <router-view />
     </n-layout-content>
-    <n-layout-footer>成府路</n-layout-footer>
+    <n-layout-footer bordered>
+      <portalFooter />
+    </n-layout-footer>
   </n-layout>
 </template>
 
 <script setup lang="ts">
+import portalHeader from './header/index.vue'
+import portalFooter from './footer/index.vue'
 
 </script>
 
 <style lang="less" scoped>
-.n-layout-header,
-.n-layout-footer {
-  background: rgba(128, 128, 128, 0.2);
-  padding: 24px;
-}
+.layoutHome {
+  min-height: 100vh;
 
-.n-layout-sider {
-  background: rgba(128, 128, 128, 0.3);
-}
+  .n-layout-header {
+    background-color: aliceblue;
+  }
 
-.n-layout-content {
-  background: rgba(128, 128, 128, 0.4);
+  .n-layout-content {
+    background-color: aquamarine;
+  }
+
+  .n-layout-footer {
+    background-color: antiquewhite;
+  }
+
 }
 </style>
